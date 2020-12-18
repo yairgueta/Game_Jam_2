@@ -8,23 +8,20 @@ public class NoStationMovement : Station
 {
     public float speed;
 
-    private Vector3 movement;
-        
+    private Vector2 movement;
         
     private Rigidbody2D rb2d;
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        
-        var playerInputController = GetComponent<PlayerInputController>();
-        Inject(playerInputController);
     }
 
     private void FixedUpdate()
     {
-        rb2d.MovePosition(transform.position + speed * movement.normalized * Time.fixedDeltaTime);
+        Vector2 delta = speed * Time.fixedDeltaTime * movement.normalized;
+        rb2d.MovePosition(rb2d.position + delta);
+        movement = Vector2.zero;
     }
-
 
     protected override void EjectAction() { }
 
@@ -39,4 +36,7 @@ public class NoStationMovement : Station
     {
         movement.y = t;
     }
+
+
+    protected override void OnTriggerEnter2D(Collider2D other) { }
 }

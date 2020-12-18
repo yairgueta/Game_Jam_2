@@ -4,47 +4,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HydraMovementScript : MonoBehaviour
+public class HydraMovement_NoPhysics : Station
 {
-    [SerializeField] private float playerRotationSpeed;
-    [SerializeField] private float playerSpeed;
+    [SerializeField] private float playerRotationSpeed = 200f;
+    [SerializeField] private float playerSpeed = 0.1f;
 
-    private float move;
     public Transform movePoint;
-    private Vector3 moveVector;
     public LayerMask whatStopsMovement;
+    
+    [HideInInspector] public Action OnEjectKey;
+    private Vector3 moveVector;
+    private float move;
     private float rotation;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        playerRotationSpeed = 200f;
-        playerSpeed = 0.1f;
         moveVector = Vector3.zero;
     }
 
-    public void OnRotate(InputAction.CallbackContext context)
-    {
-        rotation = context.ReadValue<float>();
-    }
-    public void OnForward(InputAction.CallbackContext context)
-    {
-        move = context.ReadValue<float>();
-        Debug.Log(context.ReadValue<float>());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void FixedUpdate()
     {
         HandleInput();
     }
-
-
+    
     private void HandleInput()
     {
         moveVector = GetDirectionFromAngle()*playerSpeed;
@@ -74,11 +56,29 @@ public class HydraMovementScript : MonoBehaviour
             }
         }
     }
+    
     private Vector3 GetDirectionFromAngle()
     {
         float angle = transform.eulerAngles.z * Mathf.Deg2Rad*-1;
         float sin = Mathf.Sin(angle);
         float cos = Mathf.Cos(angle);
         return new Vector3(sin ,  cos , 0f);
+    }
+
+    protected override void EjectAction()
+    {
+        OnEjectKey?.Invoke();
+    }
+
+    protected override void FireAction() { }
+
+    protected override void HorizontalAction(float t)
+    {
+        rotation = t;
+    }
+
+    protected override void VerticalAction(float t)
+    {
+        move = Mathf.Clamp01(t);
     }
 }

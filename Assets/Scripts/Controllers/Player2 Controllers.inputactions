@@ -1,0 +1,134 @@
+{
+    "name": "PlayerActions 1",
+    "maps": [
+        {
+            "name": "Player2",
+            "id": "7e8451fc-9371-4239-9356-38cee7fb6cd8",
+            "actions": [
+                {
+                    "name": "Horizontal Axis",
+                    "type": "Value",
+                    "id": "b8ceaa92-4795-45f5-910c-6f9c893a10ef",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Vertical Axis",
+                    "type": "Value",
+                    "id": "a6062c7b-8cc5-463f-9fe4-e90c715454b9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Up_Fire",
+                    "type": "Button",
+                    "id": "bbe7d48b-869c-4861-b58e-df5a8fdcd7aa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Eject",
+                    "type": "Button",
+                    "id": "9583258c-69f0-4088-b09f-7afb91b8acfa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "21b3a005-661f-4cf7-a48e-7d8e77eed249",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal Axis",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "93e996c9-5a2a-4486-8ee2-6d6c484987aa",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal Axis",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "cb50387e-9ce1-4329-826d-cff33643906e",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal Axis",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "e017d708-ad8d-4440-9db8-b271cbe5e609",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Vertical Axis",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "81dbe678-7a8c-40e9-8e5c-a1af2b773fc1",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Vertical Axis",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "0ef7a307-e93a-44c7-9d33-fc1b0ce00a55",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Vertical Axis",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "bbcaf99b-6be5-4e3e-8c65-62919b9a452a",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Up_Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b905a373-4de2-4f53-a80d-130b613de1fc",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Eject",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

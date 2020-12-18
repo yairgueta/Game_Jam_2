@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +12,7 @@ public class PlayerInputController : MonoBehaviour
     [HideInInspector] public Action ejectAction;
     [HideInInspector] public Action fireAction;
 
+    
     private PlayerInput playerInput;
     private InputAction horizontalActionInput;
     private InputAction verticalActionInput;
@@ -20,7 +22,6 @@ public class PlayerInputController : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         horizontalActionInput = playerInput.actions["Horizontal Axis"];
         verticalActionInput = playerInput.actions["Vertical Axis"];
-
         playerInput.actions["Up_Fire"].performed += ctx => fireAction?.Invoke();
         playerInput.actions["Eject"].performed += ctx => ejectAction?.Invoke();
     }
@@ -30,7 +31,4 @@ public class PlayerInputController : MonoBehaviour
         horizontalAction?.Invoke(horizontalActionInput.ReadValue<float>());
         verticalAction?.Invoke(verticalActionInput.ReadValue<float>());
     }
-    
-    
-    
 }

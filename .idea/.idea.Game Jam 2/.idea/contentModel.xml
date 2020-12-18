@@ -6,13 +6,25 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Enemy.cs" t="Include" />
+        <e p="Flamethrower.cs" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="HydraMovementScript.cs" t="Include" />
+          <e p="Controllers" t="Include">
+            <e p="Player1 Controllers.cs" t="Include" />
+            <e p="Player2 Controllers.cs" t="Include" />
+            <e p="PlayerActions.cs" t="Include" />
+          </e>
+          <e p="FireballStation.cs" t="Include" />
+          <e p="FlamethrowerStation.cs" t="Include" />
+          <e p="HydraMovement.cs" t="Include" />
+          <e p="HydraMovement_NoPhysics.cs" t="Include" />
+          <e p="HydraWheel.cs" t="Include" />
+          <e p="IEnemy.cs" t="Include" />
           <e p="NoStationMovement.cs" t="Include" />
-          <e p="PlayerActions.cs" t="Include" />
           <e p="PlayerInputController.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
           <e p="Station.cs" t="Include" />
+          <e p="StationController.cs" t="Include" />
         </e>
       </e>
       <e p="Game Jam 2.sln" t="IncludeFlat" />
