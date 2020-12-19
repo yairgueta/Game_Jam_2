@@ -19,7 +19,6 @@ public class HydraWheel : Station
 
     protected override void VerticalAction(float t)
     {
-        Debug.Log(gameObject.name + ":= forward: "+ t );
         HydraMovement.MoveForward = Mathf.Clamp01(t);
     }
 }

@@ -22,19 +22,13 @@
     <list default="true" id="7f9aa965-5468-4a29-bfb6-487d619954fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Flamethrower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Flamethrower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fire Station.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fire Station.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fireball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fireball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Flame Station.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Flame Station.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Yairs Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Yairs Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HydraMovementScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HydraMovement_NoPhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HydraMovementScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HydraMovement_NoPhysics.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Station.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Station.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +40,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Fireball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Flamethrower.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,11 +71,13 @@
         <option value="$PROJECT_DIR$/Assets/FireballStation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HydraMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Station.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Flamethrower.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Flamethrower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Fireball.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" />
       </list>
     </option>
   </component>
@@ -131,7 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608203143880</updated>
       <workItem from="1608203152859" duration="544000" />
-      <workItem from="1608218701967" duration="27739000" />
+      <workItem from="1608218701967" duration="34257000" />
     </task>
     <servers />
   </component>

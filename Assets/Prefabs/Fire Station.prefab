@@ -50,6 +50,8 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 9201750644802317610}
   fireForce: 20
+  maxAimAngle: 25
+  aimSpeed: 60
 --- !u!212 &9201750644105461213
 SpriteRenderer:
   m_ObjectHideFlags: 0
