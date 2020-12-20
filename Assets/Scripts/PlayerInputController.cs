@@ -1,10 +1,12 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum Player
+{
+    Player1, 
+    Player2
+}
 public class PlayerInputController : MonoBehaviour
 {
     [HideInInspector] public Action<float> horizontalAction;

@@ -20,16 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f9aa965-5468-4a29-bfb6-487d619954fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Flamethrower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Flamethrower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fire Station.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fire Station.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fireball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fireball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Flame Station.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Flame Station.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Yairs Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Yairs Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInputController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,24 +52,24 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HydraMovementScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInputController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StationController.cs" />
         <option value="$PROJECT_DIR$/Assets/HydraWheel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HydraStation2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HydraMovement_NoPhysics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HydraStation.cs" />
         <option value="$PROJECT_DIR$/Assets/FireStation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HydraWheel.cs" />
         <option value="$PROJECT_DIR$/Assets/FireballStation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HydraMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Station.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Flamethrower.cs" />
         <option value="$PROJECT_DIR$/Assets/Fireball.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HydraWheel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Flamethrower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInputController.cs" />
       </list>
     </option>
   </component>
@@ -128,7 +120,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608203143880</updated>
       <workItem from="1608203152859" duration="544000" />
-      <workItem from="1608218701967" duration="34257000" />
+      <workItem from="1608218701967" duration="34413000" />
+      <workItem from="1608407715367" duration="585000" />
     </task>
     <servers />
   </component>
@@ -147,6 +140,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
