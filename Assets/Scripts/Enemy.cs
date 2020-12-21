@@ -11,20 +11,19 @@ public class Enemy : MonoBehaviour, IEnemy
     [SerializeField] private float power = 10f;
     [SerializeField] private Image healthBarFiller;
     
-    private float HP;
+    public float Power => power;
     
+    private float HP;
+
     void Start()
     {
         HP = maxHP;
     }
 
-    private void Update()
-    {
-        healthBarFiller.fillAmount = HP / maxHP;
-    }
-
     public void Hit(float damage)
     {
         HP = Mathf.Clamp(HP - damage, 0, maxHP);
+        healthBarFiller.fillAmount = HP / maxHP;
     }
+    
 }
