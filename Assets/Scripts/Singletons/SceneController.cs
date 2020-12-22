@@ -7,6 +7,14 @@ public class SceneController : Singleton<SceneController>
 {
     private GameObject helpButtons1;
     private GameObject helpButtons2;
+
+    [SerializeField] private GameObject mainButtons;
+    [SerializeField] private GameObject howToPlayPanel;
+    private void Start()
+    {
+        
+    }
+    
     public enum Player
     {
         Player1,
@@ -55,5 +63,15 @@ public class SceneController : Singleton<SceneController>
             }
         }
 
+    }
+    public void EnableHowToCanvas()
+    {
+        mainButtons.SetActive(false);
+        howToPlayPanel.SetActive(true);
+    }
+    public void DisableHowToCanvas()
+    {
+        howToPlayPanel.SetActive(false);
+        mainButtons.SetActive(true);
     }
 }
