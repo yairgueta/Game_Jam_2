@@ -25,6 +25,7 @@ public class HydraMovement_NoPhysics : Station
     private void FixedUpdate()
     {
         HandleInput();
+        SceneController.Instance.SetActiveHelpButtons(SceneController.Player.Player1,SceneController.Role.Movement,true);
     }
     
     private void HandleInput()
@@ -36,6 +37,7 @@ public class HydraMovement_NoPhysics : Station
             {
                 transform.eulerAngles = transform.eulerAngles + new Vector3(0, 0, .5f) * Time.fixedDeltaTime * playerRotationSpeed;
             }
+            
         }
         else if (rotation > 0)
         {
@@ -43,6 +45,7 @@ public class HydraMovement_NoPhysics : Station
             {
                 transform.eulerAngles = transform.eulerAngles + new Vector3(0, 0, -.5f) * Time.fixedDeltaTime * playerRotationSpeed;
             }
+            
         }
         if (move > 0)
         {
