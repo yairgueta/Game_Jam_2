@@ -7,22 +7,25 @@ using UnityEngine.UI;
 
 public class FlamethrowerStation : Station
 {
+    [Header("Flame Attributes")]
     [SerializeField] private GameObject flamethrowerObject;
+    
+    [Header("Aiming Attributes")]
+    [SerializeField] private GameObject hydraHead;
     [SerializeField] private float maxAimAngle = 25f;
     [SerializeField] float aimSpeed = 100f;
 
     private float aimAngle;
-    private float startAngle;
 
-    private void Start()
+    protected override void Start()
     {
-        startAngle = flamethrowerObject.transform.localRotation.eulerAngles.z;
-        aimAngle = startAngle;
+        base.Start();
+        aimAngle = 0;
     }
 
     private void Update()
     {
-        flamethrowerObject.transform.localRotation = Quaternion.Euler(0, 0, aimAngle);
+        hydraHead.transform.localRotation = Quaternion.Euler(0, 0, aimAngle);
     }
 
     protected override void EjectAction()
@@ -35,7 +38,7 @@ public class FlamethrowerStation : Station
 
     protected override void HorizontalAction(float t)
     {
-        aimAngle = Mathf.Clamp(aimAngle - t * Time.deltaTime* aimSpeed, startAngle - maxAimAngle, startAngle + maxAimAngle);
+        aimAngle = Mathf.Clamp(aimAngle - t * Time.deltaTime* aimSpeed, - maxAimAngle, maxAimAngle);
     }
 
     protected override void VerticalAction(float t)
@@ -46,13 +49,13 @@ public class FlamethrowerStation : Station
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        var pos = flamethrowerObject.transform.position;
+        var pos = hydraHead.transform.position;
         
         transform.rotation.ToAngleAxis(out var angle, out var axis);
-        angle = angle * axis.z + maxAimAngle;
+        angle = 90 + angle * axis.z + maxAimAngle;
         Vector3 dir = new Vector2(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)).normalized;
         
         Gizmos.DrawLine(pos, pos + 3 * dir);
-        Gizmos.DrawLine(pos, pos + Vector3.Reflect(3 * dir, transform.up));
+        Gizmos.DrawLine(pos, pos + Vector3.Reflect(3 * dir, transform.right));
     }
 }

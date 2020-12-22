@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6359727171269724805}
   - component: {fileID: 6359727171269724814}
   - component: {fileID: 6359727171269724801}
-  - component: {fileID: 3861589178123141599}
+  - component: {fileID: 8308449565701828658}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -30,9 +30,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6359727171269724815}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.99000025, y: 0.09000003, z: 0}
-  m_LocalScale: {x: 0.2994, y: 0.6128, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a181ade2a0e4554a2e2a3699c643cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerActionInvoker: {fileID: 0}
   speed: 5
 --- !u!114 &6359727171269724803
 MonoBehaviour:
@@ -83,7 +84,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6359727171269724815}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
@@ -91,7 +92,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 04ff4ddecc8474c83a4f4e870600ecb1, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -108,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: ea4290bd5ea57b54b86d7b77cdd014df,
+  m_Actions: {fileID: -944628639613478452, guid: 0e9266aeda19d43e98e58d398258dd3b,
     type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
@@ -124,14 +125,6 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 5990fe14-3d7e-460b-96c9-e87b822d02a4
-    m_ActionName: HydraMovement/Rotation[/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5b846d52-0a95-406c-8899-24e4db50247f
-    m_ActionName: HydraMovement/Forward[/Keyboard/upArrow]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 7c9b9c30-b282-4d9e-9a94-487219b3253d
     m_ActionName: Player1/Horizontal Axis[/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
@@ -144,24 +137,8 @@ MonoBehaviour:
     m_ActionName: Player1/Eject[/Keyboard/s]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 9583258c-69f0-4088-b09f-7afb91b8acfa
-    m_ActionName: Player2/Eject[/Keyboard/downArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bbe7d48b-869c-4861-b58e-df5a8fdcd7aa
-    m_ActionName: Player2/Up_Fire[/Keyboard/upArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b8ceaa92-4795-45f5-910c-6f9c893a10ef
-    m_ActionName: Player2/Horizontal Axis[/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 97f6c082-0a33-48c6-8830-87054d6ac2b1
     m_ActionName: Player1/Vectical Axis[/Keyboard/s,/Keyboard/w]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a6062c7b-8cc5-463f-9fe4-e90c715454b9
-    m_ActionName: Player2/Vectical Axis[/Keyboard/downArrow,/Keyboard/upArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player1
@@ -205,22 +182,22 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1123881393
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
+  m_Sprite: {fileID: 6022572169818838068, guid: 9296ff4d473104d8dae41c173b0e90ca,
     type: 3}
-  m_Color: {r: 0.26099145, g: 0.6509434, b: 0.293115, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9499999, y: 1.9706959}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3861589178123141599
-BoxCollider2D:
+--- !u!58 &8308449565701828658
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -233,15 +210,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.87

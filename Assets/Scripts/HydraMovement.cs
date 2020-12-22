@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class HydraMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float rotationSpeed = 3f;
+    [SerializeField] private float speed = 7f;
+    [SerializeField] private float rotationSpeed = 150f;
     // [SerializeField] private GameObject hydraBody;
     
     private Rigidbody2D wholeRb2d;
@@ -16,12 +17,14 @@ public class HydraMovement : MonoBehaviour
     private void Start()
     {
         wholeRb2d = GetComponent<Rigidbody2D>();
+        wholeRb2d.centerOfMass = Vector2.zero;
     }
     
     private void FixedUpdate()
     {
-        wholeRb2d.MoveRotation(wholeRb2d.rotation -rotationSpeed * Time.deltaTime * rotate);
-        Vector2 delta = speed * Time.deltaTime * moveForward * wholeRb2d.transform.right;
+        wholeRb2d.MoveRotation(wholeRb2d.rotation - rotationSpeed * Time.deltaTime * rotate);
+        
+        Vector2 delta = speed * Time.deltaTime * moveForward * wholeRb2d.transform.up;
         wholeRb2d.MovePosition(wholeRb2d.position + delta);
     }
     

@@ -1,20 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Station : MonoBehaviour
 {
+    [Header("General Station Attributes")] 
+    [SerializeField] protected TriggerActionInvoker triggerActionInvoker;
+    
+    private bool isActive = true;
     protected StationController currentController;
 
-    protected virtual void OnTriggerEnter2D(Collider2D other)
+    protected virtual void Start()
     {
-        if (currentController != null) return;
-        currentController = other.gameObject.GetComponent<StationController>();
-        currentController?.EnterStation(this);
+        if (triggerActionInvoker == null) return;
+        triggerActionInvoker.OnTriggerAction += other =>
+        {
+            if (currentController != null) return;
+            currentController = other.gameObject.GetComponent<StationController>();
+            currentController?.EnterStation(this);
+        };
     }
-    
+
     public void Inject(PlayerInputController playerInputController)
     {
+        if (!isActive) return;
         playerInputController.ejectAction += EjectAction;
         playerInputController.fireAction += FireAction;
         playerInputController.horizontalAction += HorizontalAction;
@@ -32,6 +42,16 @@ public abstract class Station : MonoBehaviour
 
     }
 
+    public virtual void DisableStation()
+    {
+        if (currentController != null)
+        {
+            currentController.ExitStation();
+        }
+
+        isActive = false;
+    }   
+    
     protected abstract void EjectAction();
 
     protected abstract void FireAction();
