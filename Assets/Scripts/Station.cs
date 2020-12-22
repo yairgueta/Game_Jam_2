@@ -10,6 +10,7 @@ public abstract class Station : MonoBehaviour
     
     private bool isActive = true;
     protected StationController currentController;
+    protected Action OnEjection;
 
     protected virtual void Start()
     {
@@ -29,7 +30,7 @@ public abstract class Station : MonoBehaviour
         playerInputController.fireAction += FireAction;
         playerInputController.horizontalAction += HorizontalAction;
         playerInputController.verticalAction += VerticalAction;
-
+        
     }
 
     public void Eject(PlayerInputController playerInputController)
@@ -40,6 +41,7 @@ public abstract class Station : MonoBehaviour
         playerInputController.horizontalAction -= HorizontalAction;
         playerInputController.verticalAction -= VerticalAction;
 
+        OnEjection?.Invoke();
     }
 
     public virtual void DisableStation()

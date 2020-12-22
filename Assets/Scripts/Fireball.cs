@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Fireball : MonoBehaviour
@@ -9,9 +6,9 @@ public class Fireball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        IEnemy hit = other.gameObject.GetComponent<IEnemy>();
+        Enemy hit = other.gameObject.GetComponent<Enemy>();
         hit?.Hit(power);
-        // Explosion Effect?
+        // TODO: Explosion Effect?
         Destroy(gameObject);
     }
 }

@@ -4,14 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour, IEnemy
+public class Enemy : MonoBehaviour, IDamageMaker
 {
-    [Header("Attributes")] 
+    [Header("Enemy Attributes")] 
     [SerializeField] private float maxHP = 50f;
-    [SerializeField] private float power = 10f;
+    [SerializeField] private float bodyPower = 10f;
+    [SerializeField] private float speed = 5f;
+
+    [Header("References")]
     [SerializeField] private Image healthBarFiller;
-    
-    public float Power => power;
     
     private float HP;
 
@@ -24,6 +25,18 @@ public class Enemy : MonoBehaviour, IEnemy
     {
         HP = Mathf.Clamp(HP - damage, 0, maxHP);
         healthBarFiller.fillAmount = HP / maxHP;
+
+        if (HP == 0) Invoke(nameof(Die), .5f);
     }
-    
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    public float MakeDamage()
+    {
+        Hit(maxHP);
+        return bodyPower;
+    }
 }

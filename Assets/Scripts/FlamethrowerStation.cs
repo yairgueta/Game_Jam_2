@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.Controls;
-using UnityEngine.UI;
 
 public class FlamethrowerStation : Station
 {
@@ -30,8 +25,8 @@ public class FlamethrowerStation : Station
 
     protected override void EjectAction()
     {
-        currentController?.ExitStation();
         flamethrowerObject.SetActive(false);
+        currentController?.ExitStation();
     }
 
     protected override void FireAction() { }

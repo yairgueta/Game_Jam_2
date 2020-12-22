@@ -62,11 +62,10 @@ public class HydraHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Enemy hit = other.gameObject.GetComponent<Enemy>();
+        IDamageMaker hit = other.gameObject.GetComponent<IDamageMaker>();
         if (hit != null)
         {
-            hit.Hit(Mathf.Infinity);
-            GetHit(hit.Power);
+            GetHit(hit.MakeDamage());
         }
     }
     
