@@ -23,9 +23,11 @@ public class Enemy : MonoBehaviour, IDamageMaker
 
     public void Hit(float damage)
     {
+        
         HP = Mathf.Clamp(HP - damage, 0, maxHP);
         healthBarFiller.fillAmount = HP / maxHP;
 
+        HP = 0;
         if (HP == 0) Invoke(nameof(Die), .5f);
     }
 

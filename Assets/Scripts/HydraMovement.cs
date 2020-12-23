@@ -8,7 +8,6 @@ public class HydraMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 7f;
     [SerializeField] private float rotationSpeed = 150f;
-    // [SerializeField] private GameObject hydraBody;
     
     private Rigidbody2D wholeRb2d;
     private static float rotate;
@@ -23,7 +22,6 @@ public class HydraMovement : MonoBehaviour
     private void FixedUpdate()
     {
         wholeRb2d.MoveRotation(wholeRb2d.rotation - rotationSpeed * Time.deltaTime * rotate);
-        
         Vector2 delta = speed * Time.deltaTime * moveForward * wholeRb2d.transform.up;
         wholeRb2d.MovePosition(wholeRb2d.position + delta);
     }

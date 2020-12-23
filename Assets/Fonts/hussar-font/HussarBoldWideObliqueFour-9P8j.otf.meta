@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b04eb9130edfd45b582c1a44e7605c18
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hussar
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b04ddde2e937b4b64b6259439378d6b5, type: 3}
+  - {fileID: 12800000, guid: 30435c023d60d49cf9f25011b74ccfc7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

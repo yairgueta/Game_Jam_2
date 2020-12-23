@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 7b670eb5352ec449485413f0337b64eb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hussar Simple
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b741b98c66a9248b9a9265295abeff35, type: 3}
+  - {fileID: 12800000, guid: e3dde82e903a04c4ebb273a4a2f2edd8, type: 3}
+  - {fileID: 12800000, guid: 54745caa557f9461a9a4d2b14602f9f7, type: 3}
+  - {fileID: 12800000, guid: c8cd9541ff2624fd0a09cbb4cad0412c, type: 3}
+  - {fileID: 12800000, guid: b2d9b8a68043a43c2b43800c26b46ac3, type: 3}
+  - {fileID: 12800000, guid: 938b6dc9cb25c46fe817e8f48ca9fa45, type: 3}
+  - {fileID: 12800000, guid: 95da4836700e64b8b9d19766337489bb, type: 3}
+  - {fileID: 12800000, guid: 931ebe3325f7c4ba990da76105ba512d, type: 3}
+  - {fileID: 12800000, guid: 91d36529a997f4c558aab86b30b4df05, type: 3}
+  - {fileID: 12800000, guid: 955ee9a424b2544f8a1a6a89dcba3e0f, type: 3}
+  - {fileID: 12800000, guid: 57b7f9a6470c2411aba8f209e2bcd5bc, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

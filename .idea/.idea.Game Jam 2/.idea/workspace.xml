@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,25 +24,48 @@
   <component name="ChangeListManager">
     <list default="true" id="7f9aa965-5468-4a29-bfb6-487d619954fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/HydraBackground.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/HydraBackground.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Wheel-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Wheel-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Wheel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Wheel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/bg.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hero.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hydra.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/hydra.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Images/large_background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/large_background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Hydra Walls Physics.physicsMaterial2D" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Hydra Walls Physics.physicsMaterial2D.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fire Station.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fire Station.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Flame Station.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Flame Station.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Yairs Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Yairs Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flamethrower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flamethrower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HydraHeadStatus.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HydraHeadStatus.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HydraHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HydraHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IEnemy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IEnemy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Station.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Station.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StationController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StationController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HydraMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HydraMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HydraWheel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HydraWheel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInputController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInputController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Station.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Station.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StationController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StationController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/2DPipline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/2DPipline Asset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,17 +77,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerActionInvoker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/IDamageMaker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/55ADAE45-46CD-485B-A70E-2948332EBE8C/83/Math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9F514B02-475B-473C-B6F7-A3B2E451EDD3/c0/8ef639c0/ContactPoint2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C881E71-2F79-461D-96F9-95658A2D07FF/48/1c77f01a/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9F514B02-475B-473C-B6F7-A3B2E451EDD3/8d/107b8b3f/Rigidbody2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Station.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerPanelUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -86,7 +109,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerActionInvoker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HydraMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/HydraHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HydraHeadStatus.cs" />
@@ -98,8 +120,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Flamethrower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Station.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FlamethrowerStation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NoStationMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HydraMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stations/Station.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stations/FireballStation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stations/FlamethrowerStation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stations/HydraWheel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PlayerInputController.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerPanelUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stations/StationController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stations/NoStationMovement.cs" />
       </list>
     </option>
   </component>
@@ -160,7 +191,8 @@
       <workItem from="1608203152859" duration="544000" />
       <workItem from="1608218701967" duration="34413000" />
       <workItem from="1608407715367" duration="786000" />
-      <workItem from="1608551673895" duration="27660000" />
+      <workItem from="1608551673895" duration="32559000" />
+      <workItem from="1608711240104" duration="10227000" />
     </task>
     <servers />
   </component>
@@ -194,9 +226,9 @@
       <screen x="1792" y="-276" width="1920" height="1055" />
     </state>
     <state x="1792" y="-176" width="1592" height="855" key="VCS.FileHistoryDialog/1792.-276.1920.1055/0.25.1792.1095@0.25.1792.1095" timestamp="1608648488488" />
-    <state x="559" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1608308946045">
+    <state x="559" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1608734346739">
       <screen x="0" y="25" width="1792" height="1095" />
     </state>
-    <state x="559" y="257" width="672" height="678" key="search.everywhere.popup/1792.-276.1920.1055/0.25.1792.1095@0.25.1792.1095" timestamp="1608308946045" />
+    <state x="559" y="257" width="672" height="678" key="search.everywhere.popup/1792.-276.1920.1055/0.25.1792.1095@0.25.1792.1095" timestamp="1608734346739" />
   </component>
 </project>
