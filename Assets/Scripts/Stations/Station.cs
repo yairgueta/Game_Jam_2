@@ -1,75 +1,80 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Station : MonoBehaviour
+namespace Stations
 {
-    public enum StationTypeEnum
+    public abstract class Station : MonoBehaviour
     {
-        NoStation,
-        Wheel, 
-        Aiming,
-    };
+        public enum StationTypeEnum
+        {
+            NoStation,
+            Wheel, 
+            Aiming,
+        };
 
-    public Action OnEjection, OnInjection;
-    public StationTypeEnum StationType => stationType;
-    [Header("General Station Attributes")] 
-    [SerializeField] protected TriggerActionInvoker triggerActionInvoker;
+        public Action OnEjection, OnInjection;
+        public StationTypeEnum StationType => stationType;
+        [Header("General Station Attributes")] 
+        [SerializeField] protected TriggerActionInvoker triggerActionInvoker;
     
-    protected StationController currentController;
+        protected StationController currentController;
 
-    private bool isActive = true;
-    protected StationTypeEnum stationType;
+        protected StationTypeEnum stationType;
+        private bool isActive = true;
+        
 
-    protected virtual void Start()
-    {
-        if (triggerActionInvoker == null) return;
-        triggerActionInvoker.OnTriggerAction += other =>
+        protected virtual void Start()
+        {
+            if (triggerActionInvoker == null) return;
+            triggerActionInvoker.OnTriggerAction += OnTriggerAction_TriggerInvoker;
+        }
+
+        private void OnTriggerAction_TriggerInvoker(Collider2D other)
         {
             if (currentController != null) return;
             currentController = other.gameObject.GetComponent<StationController>();
             currentController?.EnterStation(this);
-        };
-    }
-
-    public void Inject(PlayerInputController playerInputController)
-    {
-        if (!isActive) return;
-        playerInputController.ejectAction += EjectAction;
-        playerInputController.fireAction += FireAction;
-        playerInputController.horizontalAction += HorizontalAction;
-        playerInputController.verticalAction += VerticalAction;
+        }
         
-        OnInjection?.Invoke();
-    }
-
-    public void Eject(PlayerInputController playerInputController)
-    {
-        currentController = null;
-        playerInputController.ejectAction -= EjectAction;
-        playerInputController.fireAction -= FireAction;
-        playerInputController.horizontalAction -= HorizontalAction;
-        playerInputController.verticalAction -= VerticalAction;
-
-        OnEjection?.Invoke();
-    }
-
-    public virtual void DisableStation()
-    {
-        if (currentController != null)
+        public void Inject(PlayerInputController playerInputController)
         {
-            currentController.ExitStation();
+            if (!isActive) return;
+            playerInputController.ejectAction += EjectAction;
+            playerInputController.fireAction += FireAction;
+            playerInputController.horizontalAction += HorizontalAction;
+            playerInputController.verticalAction += VerticalAction;
+        
+            OnInjection?.Invoke();
         }
 
-        isActive = false;
-    }   
+        public void Eject(PlayerInputController playerInputController)
+        {
+            currentController = null;
+            playerInputController.ejectAction -= EjectAction;
+            playerInputController.fireAction -= FireAction;
+            playerInputController.horizontalAction -= HorizontalAction;
+            playerInputController.verticalAction -= VerticalAction;
+
+            OnEjection?.Invoke();
+        }
+
+        public virtual void DisableStation()
+        {
+            if (currentController != null)
+            {
+                currentController.ExitStation();
+            }
+
+            triggerActionInvoker.OnTriggerAction -= OnTriggerAction_TriggerInvoker;
+            isActive = false;
+        }   
     
-    protected abstract void EjectAction();
+        protected abstract void EjectAction();
 
-    protected abstract void FireAction();
+        protected abstract void FireAction();
 
-    protected abstract void HorizontalAction(float t);
+        protected abstract void HorizontalAction(float t);
 
-    protected abstract void VerticalAction(float t);
+        protected abstract void VerticalAction(float t);
+    }
 }

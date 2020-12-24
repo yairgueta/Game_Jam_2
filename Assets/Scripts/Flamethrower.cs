@@ -10,7 +10,7 @@ public class Flamethrower : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         Enemy enemy = other.GetComponent<Enemy>();
-        enemy?.Hit(power * Time.fixedDeltaTime);
+        enemy?.GetHit(power * Time.fixedDeltaTime);
         // TODO: Damage effect?
     }
 }

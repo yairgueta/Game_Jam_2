@@ -94,8 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 711756002681556206}
   - component: {fileID: 711756002681556193}
-  - component: {fileID: 219237434}
   - component: {fileID: 219237433}
+  - component: {fileID: 1182217562008173868}
+  - component: {fileID: 219237434}
   m_Layer: 7
   m_Name: Fire Station
   m_TagString: Untagged
@@ -134,13 +135,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerActionInvoker: {fileID: 711756002760161663}
+  hydraHead: {fileID: 711756002015807615}
+  maxAimAngle: 40
+  aimSpeed: 100
   fireballPrefab: {fileID: 1944219843875379387, guid: 36a7f9520860e446498309dd188b5d4b,
     type: 3}
   spawnPoint: {fileID: 711756003135340313}
   fireForce: 100
-  hydraHead: {fileID: 711756002015807615}
-  maxAimAngle: 40
-  aimSpeed: 100
+--- !u!114 &219237433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711756002681556207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79da7abf83ba4f1d84b4a47d39d267b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headStatuses:
+  - healthPercentage: 0
+    statusSprite: {fileID: 277299343094772640, guid: d51448c7c1c844eab9c86a111a6cd0df,
+      type: 3}
+  - healthPercentage: 25
+    statusSprite: {fileID: -2162650924566227390, guid: 0c687a42e1c304d2285f3d40ff870457,
+      type: 3}
+  - healthPercentage: 50
+    statusSprite: {fileID: 8233903500369910083, guid: 0c8a6cb2610904cb4b3d692886f1c02a,
+      type: 3}
+  - healthPercentage: 75
+    statusSprite: {fileID: -826632673956276293, guid: ff093ae7db5ff45ad831830b22cc539c,
+      type: 3}
+  headSpriteRenderer: {fileID: 711756002015807601}
+--- !u!114 &1182217562008173868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711756002681556207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f72acc28a7db42719ec985501a6e47d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHydraHeadHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onHydraHeadDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 788526129936259211}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxHP: 100
 --- !u!61 &219237434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,33 +225,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5810223, y: 5.588482}
   m_EdgeRadius: 0
---- !u!114 &219237433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711756002681556207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d79da7abf83ba4f1d84b4a47d39d267b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 150
-  headStatuses:
-  - healthPercentage: 0
-    statusSprite: {fileID: 277299343094772640, guid: d51448c7c1c844eab9c86a111a6cd0df,
-      type: 3}
-  - healthPercentage: 25
-    statusSprite: {fileID: -2162650924566227390, guid: 0c687a42e1c304d2285f3d40ff870457,
-      type: 3}
-  - healthPercentage: 50
-    statusSprite: {fileID: 8233903500369910083, guid: 0c8a6cb2610904cb4b3d692886f1c02a,
-      type: 3}
-  - healthPercentage: 75
-    statusSprite: {fileID: -826632673956276293, guid: ff093ae7db5ff45ad831830b22cc539c,
-      type: 3}
-  headSpriteRenderer: {fileID: 711756002015807601}
 --- !u!1 &711756002760161659
 GameObject:
   m_ObjectHideFlags: 0

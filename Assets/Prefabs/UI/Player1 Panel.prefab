@@ -238,7 +238,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5179601636287788412}
   - component: {fileID: 5179601636287788414}
-  - component: {fileID: 5179601636287788413}
   m_Layer: 5
   m_Name: Player1 Panel
   m_TagString: Untagged
@@ -275,52 +274,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5179601636287788411}
   m_CullTransparentMesh: 1
---- !u!114 &5179601636287788413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5179601636287788411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbcd109cfe6ea4f819eb81699b5382c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerID: 0
-  panelStationSprites:
-  - stationType: 0
-    middleIcon: {fileID: 0}
-    northSprite: {fileID: 0}
-    southSprite: {fileID: 0}
-    eastSprite: {fileID: 0}
-    westSprite: {fileID: 0}
-  - stationType: 1
-    middleIcon: {fileID: -7898551492517632436, guid: f1f569febbfaf410395286f9dbedfeca,
-      type: 3}
-    northSprite: {fileID: 3648884583820965570, guid: f1f569febbfaf410395286f9dbedfeca,
-      type: 3}
-    southSprite: {fileID: 6166163983051622119, guid: f1f569febbfaf410395286f9dbedfeca,
-      type: 3}
-    eastSprite: {fileID: -1937094136325837126, guid: f1f569febbfaf410395286f9dbedfeca,
-      type: 3}
-    westSprite: {fileID: 309569655915980436, guid: f1f569febbfaf410395286f9dbedfeca,
-      type: 3}
-  - stationType: 2
-    middleIcon: {fileID: 4256628665934590555, guid: f1f569febbfaf410395286f9dbedfeca,
-      type: 3}
-    northSprite: {fileID: 0}
-    southSprite: {fileID: 6166163983051622119, guid: f1f569febbfaf410395286f9dbedfeca,
-      type: 3}
-    eastSprite: {fileID: -1937094136325837126, guid: f1f569febbfaf410395286f9dbedfeca,
-      type: 3}
-    westSprite: {fileID: 309569655915980436, guid: f1f569febbfaf410395286f9dbedfeca,
-      type: 3}
-  middleIcon: {fileID: 1831075260870992498}
-  northSprite: {fileID: 4903433945004993726}
-  southSprite: {fileID: 7105552110421971969}
-  eastSprite: {fileID: 1482716736891896987}
-  westSprite: {fileID: 917589320501653569}
 --- !u!1 &5179601636404478225
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5179601636404478226}
   - component: {fileID: 5179601636404478227}
+  - component: {fileID: 2113585135121760566}
   m_Layer: 5
   m_Name: Keys
   m_TagString: Untagged
@@ -370,6 +324,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5179601636404478225}
   m_CullTransparentMesh: 1
+--- !u!114 &2113585135121760566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179601636404478225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcd109cfe6ea4f819eb81699b5382c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: 0
+  middleIcon: {fileID: 1831075260870992498}
+  northSprite: {fileID: 4903433945004993726}
+  southSprite: {fileID: 7105552110421971969}
+  eastSprite: {fileID: 1482716736891896987}
+  westSprite: {fileID: 917589320501653569}
+  panelStationSprites:
+  - stationType: 1
+    middleIcon: {fileID: -7898551492517632436, guid: f1f569febbfaf410395286f9dbedfeca,
+      type: 3}
+    northSprite: {fileID: 3648884583820965570, guid: f1f569febbfaf410395286f9dbedfeca,
+      type: 3}
+    southSprite: {fileID: 6166163983051622119, guid: f1f569febbfaf410395286f9dbedfeca,
+      type: 3}
+    eastSprite: {fileID: -1937094136325837126, guid: f1f569febbfaf410395286f9dbedfeca,
+      type: 3}
+    westSprite: {fileID: 309569655915980436, guid: f1f569febbfaf410395286f9dbedfeca,
+      type: 3}
+  - stationType: 2
+    middleIcon: {fileID: 4256628665934590555, guid: f1f569febbfaf410395286f9dbedfeca,
+      type: 3}
+    northSprite: {fileID: 0}
+    southSprite: {fileID: 6166163983051622119, guid: f1f569febbfaf410395286f9dbedfeca,
+      type: 3}
+    eastSprite: {fileID: -1937094136325837126, guid: f1f569febbfaf410395286f9dbedfeca,
+      type: 3}
+    westSprite: {fileID: 309569655915980436, guid: f1f569febbfaf410395286f9dbedfeca,
+      type: 3}
 --- !u!1 &5768415254884918597
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class Fireball : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Enemy hit = other.gameObject.GetComponent<Enemy>();
-        hit?.Hit(power);
+        hit?.GetHit(power);
         // TODO: Explosion Effect?
         Destroy(gameObject);
     }
