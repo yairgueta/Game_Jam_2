@@ -16,12 +16,14 @@ public class FireballStation : Station
     [SerializeField] float aimSpeed = 100f;
 
     private float aimAngle;
+    private AudioSource fireSound;
     
     protected override void Start()
     {
         base.Start();
         stationType = StationTypeEnum.Aiming;
         aimAngle = 0;
+        fireSound = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -39,6 +41,7 @@ public class FireballStation : Station
         //Fire
         Rigidbody2D fireballRb2d = Instantiate(fireballPrefab, spawnPoint.position, spawnPoint.rotation).GetComponent<Rigidbody2D>();
         fireballRb2d.AddForce(spawnPoint.up*fireForce, ForceMode2D.Impulse);
+        fireSound.Play();
         
     }
 

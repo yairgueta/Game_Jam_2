@@ -10,6 +10,7 @@ public class FlamethrowerStation : Station
     [SerializeField] private float maxAimAngle = 25f;
     [SerializeField] float aimSpeed = 100f;
 
+    private AudioSource flameSound;
     private float aimAngle;
 
     protected override void Start()
@@ -17,6 +18,7 @@ public class FlamethrowerStation : Station
         base.Start();
         stationType = StationTypeEnum.Aiming;
         aimAngle = 0;
+        flameSound = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -28,9 +30,12 @@ public class FlamethrowerStation : Station
     {
         flamethrowerObject.SetActive(false);
         currentController?.ExitStation();
+        flameSound.Stop();
     }
 
-    protected override void FireAction() { }
+    protected override void FireAction()
+    {
+    }
 
     protected override void HorizontalAction(float t)
     {
@@ -40,6 +45,10 @@ public class FlamethrowerStation : Station
     protected override void VerticalAction(float t)
     {
         flamethrowerObject.SetActive(t > .1f);
+        if (t!=1)
+        {
+            flameSound.Play();
+        }
     }
 
     private void OnDrawGizmosSelected()
