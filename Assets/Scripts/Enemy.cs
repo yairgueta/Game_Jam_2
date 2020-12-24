@@ -67,19 +67,18 @@ public class Enemy : MonoBehaviour, IDamageMaker
     {
         var heads = HydraHead.AllHeads;
         var curMinHead = heads[0];
-        var curMinDist = Vector3.SqrMagnitude(transform.position - curMinHead.transform.position);
+        var curMinDist = Mathf.Infinity;
 
-        for (var i = 1; i < heads.Count; i++)
+        foreach (var hydraHead in heads)
         {
-            var hydraHead = heads[i];
+            if (!hydraHead.IsAlive) continue;
             var dist = Vector3.SqrMagnitude(transform.position - hydraHead.transform.position);
             if (!(dist < curMinDist)) continue;
             curMinHead = hydraHead;
-            curMinHead = hydraHead;
+            curMinDist = dist;
         }
 
         currentTarget = curMinHead;
         destinationSetter.target = currentTarget.transform;
-
     }
 }

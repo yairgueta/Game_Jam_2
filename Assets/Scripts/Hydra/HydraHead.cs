@@ -15,7 +15,7 @@ namespace Hydra
         private static Dictionary<int, HydraHead> _idToHead;
         private static int _counter; 
         public int HeadID { get; private set; }
-        
+        public bool IsAlive { get; private set; }
         [SerializeField] private float maxHP = 100;
 
         private Station station;
@@ -38,6 +38,7 @@ namespace Hydra
         void Start()
         {
             station = GetComponent<Station>();
+            IsAlive = true;
             HP = maxHP;
         }
 
@@ -58,6 +59,7 @@ namespace Hydra
             // TODO: Destroy Animation?
             station.DisableStation();
             onHydraHeadDie?.Invoke();
+            IsAlive = false;
         }
 
         private void OnCollisionEnter2D(Collision2D other)

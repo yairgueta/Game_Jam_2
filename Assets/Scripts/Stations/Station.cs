@@ -60,6 +60,7 @@ namespace Stations
 
         public virtual void DisableStation()
         {
+            if (isActive) return;
             if (currentController != null)
             {
                 currentController.ExitStation();
