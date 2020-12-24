@@ -21,7 +21,5 @@ namespace Stations
         {
             flamethrowerObject.SetActive(t > .1f);
         }
-
-        
     }
 }
