@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class SceneController : Singleton<SceneController>
 {
@@ -10,9 +11,11 @@ public class SceneController : Singleton<SceneController>
 
     [SerializeField] private GameObject mainButtons;
     [SerializeField] private GameObject howToPlayPanel;
+
+    private AudioSource buttonClickSound;
     private void Start()
     {
-        
+        buttonClickSound = GetComponent<AudioSource>();
     }
     
     public enum Player
@@ -28,6 +31,11 @@ public class SceneController : Singleton<SceneController>
     public void MoveToScene(string scene)
     {
         SceneManager.LoadScene(scene);
+        PlayClickSound();
+    }
+    public void PlayClickSound()
+    {
+        buttonClickSound.Play();
     }
     public void ExitGame()
     {
@@ -68,10 +76,12 @@ public class SceneController : Singleton<SceneController>
     {
         mainButtons.SetActive(false);
         howToPlayPanel.SetActive(true);
+        PlayClickSound();
     }
     public void DisableHowToCanvas()
     {
         howToPlayPanel.SetActive(false);
         mainButtons.SetActive(true);
+        PlayClickSound();
     }
 }
