@@ -14,6 +14,8 @@ namespace Stations
         protected override void EjectAction()
         {
             currentController?.ExitStation();
+            HydraMovement.Rotate = 0;
+            HydraMovement.MoveForward = 0;
         }
 
         protected override void FireAction() { }

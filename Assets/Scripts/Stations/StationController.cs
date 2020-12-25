@@ -36,7 +36,6 @@ public class StationController : MonoBehaviour
         defaultStation = GetComponent<NoStationMovement>();
         currentStation = defaultStation;
         currentStation.Inject(playerInputController);
-        OnExitStation?.Invoke(playerID);
     }
 
     /**
