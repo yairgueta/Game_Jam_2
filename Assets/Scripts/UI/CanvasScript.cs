@@ -6,7 +6,8 @@ namespace UI
     {
         void Start()
         {
-            SceneController.Instance.SetHelpButtons(transform.GetChild(0).gameObject, transform.GetChild(1).gameObject);
+            //SoundManager.Instance.PlaySound(SoundManager.Sound.FireBallSound);
+            //SceneController.Instance.SetHelpButtons(transform.GetChild(0).gameObject, transform.GetChild(1).gameObject);
         }
     }
 }

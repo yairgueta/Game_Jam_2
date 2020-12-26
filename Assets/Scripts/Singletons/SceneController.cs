@@ -16,6 +16,7 @@ public class SceneController : Singleton<SceneController>
     private void Start()
     {
         buttonClickSound = GetComponent<AudioSource>();
+        SoundManager.Instance.PlaySound(SoundManager.Sound.StartSound);
     }
     
     public enum Player
