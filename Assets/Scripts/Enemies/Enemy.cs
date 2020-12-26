@@ -9,6 +9,7 @@ namespace Enemies
     [RequireComponent(typeof(AIDestinationSetter), typeof(AIPath))]
     public class Enemy : MonoBehaviour, IDamageMaker
     {
+        public Action<Enemy> onThisEnemyDeath;
         [Header("References")]
         [SerializeField] private RectTransform healthBarFiller;
     
@@ -33,7 +34,6 @@ namespace Enemies
 
         private void Start()
         {
-            EnemiesManager.Instance.EnemiesCount++;
             destinationSetter = GetComponent<AIDestinationSetter>();
             aiPath = GetComponent<AIPath>();
         
@@ -58,6 +58,7 @@ namespace Enemies
 
         private void Die()
         {
+            onThisEnemyDeath?.Invoke(this);
             EnemiesManager.Instance.onEnemyDeath?.Invoke(this);
             Destroy(gameObject);
         }

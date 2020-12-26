@@ -323,8 +323,6 @@
             <e p="Ballistra.cs" t="Include" />
             <e p="BallistraBullet.cs" t="Include" />
             <e p="EnemiesManager.cs" t="Include" />
-            <e p="EnemiesSpawner.cs" t="Include" />
-            <e p="EnemiesSpawningPoint.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemyGFX.cs" t="Include" />
             <e p="IDamageMaker.cs" t="Include" />
@@ -358,6 +356,11 @@
             <e p="CanvasScript.cs" t="Include" />
             <e p="MinimapManager.cs" t="Include" />
             <e p="PlayerPanelUI.cs" t="Include" />
+            <e p="WaveUI.cs" t="Include" />
+          </e>
+          <e p="Wave" t="Include">
+            <e p="Wave.cs" t="Include" />
+            <e p="WavesManager.cs" t="Include" />
           </e>
         </e>
       </e>
