@@ -6,83 +6,47 @@ using UnityEngine.Video;
 
 public class SceneController : Singleton<SceneController>
 {
-    private GameObject helpButtons1;
-    private GameObject helpButtons2;
-
     [SerializeField] private GameObject mainButtons;
     [SerializeField] private GameObject howToPlayPanel;
 
-    private AudioSource buttonClickSound;
     private void Start()
     {
-        buttonClickSound = GetComponent<AudioSource>();
         SoundManager.Instance.PlaySound(SoundManager.Sound.StartSound);
     }
-    
-    public enum Player
+    public enum Scene
     {
-        Player1,
-        Player2
+        Start,
+        Game
     };
-    public enum Role
+    public void MoveToScene(int scene)
     {
-        Fire,
-        Movement
-    };
-    public void MoveToScene(string scene)
-    {
-        SceneManager.LoadScene(scene);
-        PlayClickSound();
-    }
-    public void PlayClickSound()
-    {
-        buttonClickSound.Play();
+        switch (scene)
+        {
+            case (int)Scene.Game:
+                SoundManager.Instance.PlaySound(SoundManager.Sound.GameSound);
+                SceneManager.LoadScene(1);
+                break;
+            case (int)Scene.Start:
+                SoundManager.Instance.PlaySound(SoundManager.Sound.StartSound);
+                SceneManager.LoadScene(0);
+                break;
+        }
+        SoundManager.Instance.PlaySound(SoundManager.Sound.buttonSound);
     }
     public void ExitGame()
     {
         Application.Quit();
     }
-    public void SetHelpButtons(GameObject first,GameObject second)
-    {
-        helpButtons1 = first;
-        helpButtons2 = second;
-    }
-    public void SetActiveHelpButtons(Player player,Role role,bool setActive)
-    {
-        if (player == Player.Player1)
-        {
-            if (role == Role.Fire)
-            {
-                helpButtons1.transform.GetChild(0).gameObject.SetActive(setActive);
-            }
-            else
-            {
-                helpButtons1.transform.GetChild(1).gameObject.SetActive(setActive);
-            }
-        }
-        else
-        {
-            if (role == Role.Fire)
-            {
-                helpButtons2.transform.GetChild(0).gameObject.SetActive(setActive);
-            }
-            else
-            {
-                helpButtons2.transform.GetChild(1).gameObject.SetActive(setActive);
-            }
-        }
-
-    }
     public void EnableHowToCanvas()
     {
         mainButtons.SetActive(false);
         howToPlayPanel.SetActive(true);
-        PlayClickSound();
+        SoundManager.Instance.PlaySound(SoundManager.Sound.buttonSound);
     }
     public void DisableHowToCanvas()
     {
         howToPlayPanel.SetActive(false);
         mainButtons.SetActive(true);
-        PlayClickSound();
+        SoundManager.Instance.PlaySound(SoundManager.Sound.buttonSound);
     }
 }
