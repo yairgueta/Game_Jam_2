@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 4773078169923518663}
   - component: {fileID: 4773078169923518662}
   - component: {fileID: 7292256389895709627}
+  - component: {fileID: 1094401306650838885}
   m_Layer: 6
   m_Name: Enemy@Main
   m_TagString: Untagged
@@ -173,8 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 1.5
-  height: 1.5
+  radius: 0.58
+  height: 0.53
   repathRate: 0.5
   canSearch: 1
   canMove: 1
@@ -189,9 +190,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 2.94
+  slowdownDistance: 2.89
   pickNextWaypointDist: 1.07
-  endReachedDistance: 0.2
+  endReachedDistance: 0.32
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 1
@@ -247,6 +248,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &1094401306650838885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773078169923518661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183748dd497aa473a98ff0cd8cb67fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  uniqueID: 6415881792183497025
+  updateError: 3.42
+  checkTime: 0.2
 --- !u!1 &6541129929869007892
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 2890485227224946360}
+  rotationSpeed: 3
 --- !u!1 &8360875348623799540
 GameObject:
   m_ObjectHideFlags: 0
