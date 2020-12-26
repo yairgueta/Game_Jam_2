@@ -1,6 +1,7 @@
 using Hydra;
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Enemies
 {
@@ -12,19 +13,22 @@ namespace Enemies
     
         [Header("AI Attributes")]
         [Tooltip("The time between targeting to the nearest hydra again")][SerializeField] private float hydraHeadTargetRefreshRate = 2f;
- 
+
         [Header("Enemy Attributes")] 
+        public UnityEvent onChangedTarget;
         [SerializeField] private float maxHP = 50f;
         [SerializeField] private float bodyPower = 10f;
         [SerializeField] private float speed = 5f;
-
-        private AIDestinationSetter destinationSetter;
+        
         private AIPath aiPath;
+        private HydraHead currentTarget;
+        private AIDestinationSetter destinationSetter;
         private float HP;
         private Vector2 fillerOriginalSize;
-        private HydraHead currentTarget;
 
-        void Start()
+        public Transform CurrentTarget => currentTarget.EnemiesTarget;
+
+        private void Start()
         {
             destinationSetter = GetComponent<AIDestinationSetter>();
             aiPath = GetComponent<AIPath>();
@@ -44,7 +48,6 @@ namespace Enemies
         public void GetHit(float damage)
         {
             HP = Mathf.Clamp(HP - damage, 0, maxHP);
-            var rect = healthBarFiller.rect;
             healthBarFiller.sizeDelta = new Vector2((HP / maxHP) * fillerOriginalSize.x, fillerOriginalSize.y);
             if (HP == 0) Invoke(nameof(Die), .1f);
         }
@@ -76,8 +79,10 @@ namespace Enemies
                 curMinDist = dist;
             }
 
+            if (currentTarget == curMinHead) return;
             currentTarget = curMinHead;
-            destinationSetter.target = currentTarget.transform;
+            destinationSetter.target = currentTarget.EnemiesTarget;
+            onChangedTarget?.Invoke();
         }
     }
 }

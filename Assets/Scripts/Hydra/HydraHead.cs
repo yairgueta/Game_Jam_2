@@ -10,7 +10,7 @@ namespace Hydra
 {
     public class HydraHead : MonoBehaviour
     {
-        private static Dictionary<int, HydraHead> _idToHead;
+        private static Dictionary<int, HydraHead> _idToHead = new Dictionary<int, HydraHead>();
         private static int _counter;
         
         public UnityEvent<float> onHydraHeadHit;
@@ -18,9 +18,10 @@ namespace Hydra
         
         public int HeadID { get; private set; }
         public bool IsAlive { get; private set; }
+        public Transform EnemiesTarget => enemiesTarget;
         
         [SerializeField] private float maxHP = 100;
-
+        [SerializeField] private Transform enemiesTarget;
         private Station station;
         private float HP;
 
@@ -31,10 +32,15 @@ namespace Hydra
             return _idToHead[id];
         }
 
+        public static void ResetHeads()
+        {
+            _idToHead = new Dictionary<int, HydraHead>();
+            _counter = 0;
+        }
+
         private void Awake()
         {
             HeadID = HydraHead._counter++;
-            _idToHead ??= new Dictionary<int, HydraHead>();
             _idToHead.Add(HeadID, this);
         }
 
@@ -59,7 +65,6 @@ namespace Hydra
 
         private void Die()
         {
-            // TODO: Destroy Animation?
             station.DisableStation();
             onHydraHeadDie?.Invoke();
             IsAlive = false;

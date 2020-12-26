@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Hydra;
 using UnityEditor;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
@@ -79,6 +80,7 @@ public class GameManager : MonoBehaviour
     {
         ResetTimeScale();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        HydraHead.ResetHeads();
     }
 
     public void ResetTimeScale()
@@ -89,5 +91,7 @@ public class GameManager : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireCube(Vector3.zero, new Vector3(mapLength, 1, 0));
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(Vector3.zero, new Vector3(mapLength, .5f, 0));
     }
 }
