@@ -33,6 +33,7 @@ namespace Enemies
 
         private void Start()
         {
+            EnemiesManager.Instance.EnemiesCount++;
             destinationSetter = GetComponent<AIDestinationSetter>();
             aiPath = GetComponent<AIPath>();
         
@@ -42,17 +43,6 @@ namespace Enemies
         
             InvokeRepeating(nameof(TargetClosestHydra), 0, hydraHeadTargetRefreshRate);
         }
-
-        private void OnEnable()
-        {
-            EnemiesManager.Instance.EnemiesCount++;
-        }
-
-        // private void OnDisable()
-        // {
-        //     EnemiesManager.Instance.EnemiesCount--;
-        //
-        // }
 
         private void Update()
         {

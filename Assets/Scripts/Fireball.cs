@@ -9,6 +9,7 @@ public class Fireball : MonoBehaviour
 
     private void Awake()
     {
+        transform.parent = EnemiesManager.Instance.transform;
         Destroy(this, duration);
     }
 
@@ -17,6 +18,7 @@ public class Fireball : MonoBehaviour
         Enemy hit = other.gameObject.GetComponent<Enemy>();
         hit?.GetHit(power);
         // TODO: Explosion Effect?
+        Debug.Log(other.gameObject.name);
         Destroy(gameObject);
     }
 }

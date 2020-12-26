@@ -7,7 +7,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="BallistraBullet.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="Fonts" t="Include">
             <e p="lemon-milk-font" t="Include">
@@ -322,7 +321,10 @@
           </e>
           <e p="Enemies" t="Include">
             <e p="Ballistra.cs" t="Include" />
+            <e p="BallistraBullet.cs" t="Include" />
             <e p="EnemiesManager.cs" t="Include" />
+            <e p="EnemiesSpawner.cs" t="Include" />
+            <e p="EnemiesSpawningPoint.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemyGFX.cs" t="Include" />
             <e p="IDamageMaker.cs" t="Include" />
@@ -335,7 +337,6 @@
             <e p="HydraHeadsController.cs" t="Include" />
             <e p="HydraHealth.cs" t="Include" />
             <e p="HydraMovement.cs" t="Include" />
-            <e p="HydraMovement_NoPhysics.cs" t="Include" />
           </e>
           <e p="RepetitiveMapObject.cs" t="Include" />
           <e p="Singletons" t="Include">
