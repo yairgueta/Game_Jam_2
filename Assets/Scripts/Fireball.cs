@@ -9,7 +9,6 @@ public class Fireball : MonoBehaviour
 
     private void Awake()
     {
-        transform.parent = EnemiesManager.Instance.transform;
         Destroy(this, duration);
     }
 

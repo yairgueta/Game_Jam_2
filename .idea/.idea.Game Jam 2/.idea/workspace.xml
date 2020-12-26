@@ -23,16 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f9aa965-5468-4a29-bfb6-487d619954fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Wave.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam 2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BallistraBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/BallistraBullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BallistraBullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/BallistraBullet.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fireball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fireball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Yairs Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Yairs Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/BallistraBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/BallistraBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesSpawningPoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesSpawningPoint.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hydra/HydraMovement_NoPhysics.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hydra/HydraMovement_NoPhysics.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +61,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerActionInvoker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FireballStation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/HydraHealth.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HydraHeadStatus.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IDamageInflictor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IDamageMake.cs" />
@@ -105,12 +99,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyGFX.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hydra/HydraHead.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Ballistra.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Singletons/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/BallistraBullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesSpawningPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Wave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/BallistraBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Fireball.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemiesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Wave/Wave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Wave/WavesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/WaveUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/WaveUI.cs" />
       </list>
     </option>
   </component>
@@ -172,7 +173,7 @@
       <workItem from="1608218701967" duration="34413000" />
       <workItem from="1608407715367" duration="786000" />
       <workItem from="1608551673895" duration="32559000" />
-      <workItem from="1608711240104" duration="64280000" />
+      <workItem from="1608711240104" duration="68505000" />
     </task>
     <servers />
   </component>
@@ -197,14 +198,15 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="674" y="273" key="RiderGenerateDialog" timestamp="1608583521646">
+    <state x="674" y="273" key="RiderGenerateDialog" timestamp="1608996560106">
       <screen x="0" y="25" width="1792" height="1095" />
     </state>
-    <state x="674" y="273" key="RiderGenerateDialog/0.25.1792.1095@0.25.1792.1095" timestamp="1608324038333" />
+    <state x="674" y="273" key="RiderGenerateDialog/0.25.1792.1095@0.25.1792.1095" timestamp="1608996560106" />
     <state x="674" y="273" key="RiderGenerateDialog/1792.-276.1920.1055/0.25.1792.1095@0.25.1792.1095" timestamp="1608583521646" />
-    <state x="1792" y="-176" width="1592" height="855" key="VCS.FileHistoryDialog" timestamp="1608648488488">
-      <screen x="1792" y="-276" width="1920" height="1055" />
+    <state x="0" y="129" width="1486" height="888" key="VCS.FileHistoryDialog" timestamp="1608997551430">
+      <screen x="0" y="25" width="1792" height="1095" />
     </state>
+    <state x="0" y="129" width="1486" height="888" key="VCS.FileHistoryDialog/0.25.1792.1095@0.25.1792.1095" timestamp="1608997551430" />
     <state x="1792" y="-176" width="1592" height="855" key="VCS.FileHistoryDialog/1792.-276.1920.1055/0.25.1792.1095@0.25.1792.1095" timestamp="1608648488488" />
     <state x="559" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1608982298180">
       <screen x="0" y="25" width="1792" height="1095" />

@@ -17,7 +17,6 @@ public class BallistraBullet : MonoBehaviour, IDamageMaker
 
     private void Start()
     {
-        transform.parent = EnemiesManager.Instance.transform;
         Destroy(gameObject, duration);
     }
 
