@@ -7,6 +7,7 @@ public class SoundManager : Singleton<SoundManager>
     private AudioSource GameAudio;
     private AudioSource FlameSoundEffect;
     private AudioSource FireSoundEffect;
+    private AudioSource 
 
     private AudioClip GameSound;
     private AudioClip StartSound;
@@ -24,8 +25,6 @@ public class SoundManager : Singleton<SoundManager>
 
         FireSoundEffect = gameObject.AddComponent<AudioSource>();
         FireSoundEffect.clip = Resources.Load<AudioClip>("Sounds/FireballSoundEffect");
-
-
 
         FlameSoundEffect.loop = false;
         FireSoundEffect.loop = false;
