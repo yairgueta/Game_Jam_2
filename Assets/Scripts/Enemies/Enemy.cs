@@ -1,3 +1,4 @@
+using System;
 using Hydra;
 using Pathfinding;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace Enemies
         [SerializeField] private float maxHP = 50f;
         [SerializeField] private float bodyPower = 10f;
         [SerializeField] private float speed = 5f;
+        [SerializeField] private int score = 10;
         
         private AIPath aiPath;
         private HydraHead currentTarget;
@@ -27,6 +29,7 @@ namespace Enemies
         private Vector2 fillerOriginalSize;
 
         public Transform CurrentTarget => currentTarget.EnemiesTarget;
+        public int Score => score;
 
         private void Start()
         {
@@ -39,6 +42,17 @@ namespace Enemies
         
             InvokeRepeating(nameof(TargetClosestHydra), 0, hydraHeadTargetRefreshRate);
         }
+
+        private void OnEnable()
+        {
+            EnemiesManager.Instance.EnemiesCount++;
+        }
+
+        // private void OnDisable()
+        // {
+        //     EnemiesManager.Instance.EnemiesCount--;
+        //
+        // }
 
         private void Update()
         {
@@ -54,6 +68,7 @@ namespace Enemies
 
         private void Die()
         {
+            EnemiesManager.Instance.onEnemyDeath?.Invoke(this);
             Destroy(gameObject);
         }
 

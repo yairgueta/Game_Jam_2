@@ -322,6 +322,7 @@
           </e>
           <e p="Enemies" t="Include">
             <e p="Ballistra.cs" t="Include" />
+            <e p="EnemiesManager.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemyGFX.cs" t="Include" />
             <e p="IDamageMaker.cs" t="Include" />

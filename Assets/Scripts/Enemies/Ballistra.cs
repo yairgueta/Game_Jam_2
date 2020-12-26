@@ -62,7 +62,6 @@ namespace Enemies
                     enemyGfx.enabled = false;
                     break;
                 case State.Moving:
-                    // Debug.Log(thisEnemy.CurrentTarget.position);
                     aiPath.canSearch = true;
                     aiPath.canMove = true;
                     enemyGfx.enabled = true;
