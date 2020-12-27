@@ -130,9 +130,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarFiller: {fileID: 8484716934063190731}
   hydraHeadTargetRefreshRate: 2
+  onChangedTarget:
+    m_PersistentCalls:
+      m_Calls: []
   maxHP: 50
   bodyPower: 10
   speed: 5
+  score: 10
 --- !u!114 &8640170199007717000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,8 +411,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -628610959
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: 1961183383047197949, guid: 059de93f5b35b409a91a9e60ea453e09,
     type: 3}
@@ -541,7 +545,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f,
     type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

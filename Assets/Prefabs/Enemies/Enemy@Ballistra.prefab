@@ -138,6 +138,7 @@ MonoBehaviour:
   maxHP: 100
   bodyPower: 10
   speed: 3
+  score: 10
 --- !u!114 &3783590417264962880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,8 +460,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -628610959
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: 2731795287329381114, guid: 059de93f5b35b409a91a9e60ea453e09,
     type: 3}
@@ -623,7 +624,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f40b13dd38fb7486bb0e989ba9cb456d, type: 3}
-  m_Color: {r: 0.3962264, g: 0.10856858, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
