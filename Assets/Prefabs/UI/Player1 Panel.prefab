@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.31500244, y: -78.689}
-  m_SizeDelta: {x: 45.3418, y: 62.6329}
+  m_AnchoredPosition: {x: -0.000045776, y: -78.689}
+  m_SizeDelta: {x: 218.53, y: 62.6329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &836269290476836642
 CanvasRenderer:
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Sprite: {fileID: 3648884583820965570, guid: f1f569febbfaf410395286f9dbedfeca,
     type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -346,7 +346,7 @@ MonoBehaviour:
   - stationType: 1
     middleIcon: {fileID: -7898551492517632436, guid: f1f569febbfaf410395286f9dbedfeca,
       type: 3}
-    northSprite: {fileID: 3648884583820965570, guid: f1f569febbfaf410395286f9dbedfeca,
+    northSprite: {fileID: 5331130472709884195, guid: 99a857b09d4c849e39c208b4a62324f4,
       type: 3}
     southSprite: {fileID: 6166163983051622119, guid: f1f569febbfaf410395286f9dbedfeca,
       type: 3}
@@ -357,7 +357,8 @@ MonoBehaviour:
   - stationType: 2
     middleIcon: {fileID: 4256628665934590555, guid: f1f569febbfaf410395286f9dbedfeca,
       type: 3}
-    northSprite: {fileID: 0}
+    northSprite: {fileID: 5331130472709884195, guid: 99a857b09d4c849e39c208b4a62324f4,
+      type: 3}
     southSprite: {fileID: 6166163983051622119, guid: f1f569febbfaf410395286f9dbedfeca,
       type: 3}
     eastSprite: {fileID: -1937094136325837126, guid: f1f569febbfaf410395286f9dbedfeca,

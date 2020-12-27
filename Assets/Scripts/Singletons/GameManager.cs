@@ -8,6 +8,7 @@ using TMPro;
 using UnityEditor;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -15,18 +16,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public float mapLength = 100f;
-    
-    [Header("Lose Screen Attributes")] 
-    [SerializeField] private GameObject loseScreenPanel;
-    [SerializeField] private Image loseScreenBG;
-    [SerializeField] private GameObject loseScreenText;
-    [SerializeField] private float loseAnimationDuration = 1.2f;
 
-    [Header("Win Screen Attributes")] 
-    [SerializeField] private GameObject winScreenPanel;
-    [SerializeField] private Image winScreenBG;
+    [Header("End Game References")] 
+    [SerializeField] private UnityEvent onWin, onLose;
+    [SerializeField] private GameObject endScreenPanel;
+    [SerializeField] private Image endScreenBG;
     [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private float winAnimationDuration;
+    [SerializeField] private float animationDuration;
+
+    [SerializeField] private Sprite loseBG, winBG;
 
     private int score;
     
@@ -46,7 +44,6 @@ public class GameManager : MonoBehaviour
     public static void Lose_Menu()
     {
         Instance.Lose();
-
     }
 
     [MenuItem("Manager/Win")]
@@ -65,48 +62,30 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
-        Time.timeScale = 0f;
-        StartCoroutine(AnimateLoseScreen());
+        onLose?.Invoke();
+        endScreenBG.sprite = loseBG;
+        AnimateEndScreen();
     }
+    
 
-    private IEnumerator AnimateLoseScreen()
-    {
-        loseScreenPanel.SetActive(true);
-        loseScreenText.SetActive(false);
-        var originalColor = loseScreenBG.color;
-        float alpha = originalColor.a;
-        originalColor.a = 0;
-        loseScreenBG.color = originalColor;
-        loseScreenBG.DOFade(alpha, loseAnimationDuration).SetUpdate(true);
-        yield return new WaitForSecondsRealtime(loseAnimationDuration / 3);
-        loseScreenText.SetActive(true);
-        loseScreenText.transform.DOMoveY(0f, loseAnimationDuration*2).From().SetEase(Ease.OutBounce).SetUpdate(true);
-    }
-    
-    
-    
     public void Win()
     {
-        Time.timeScale = 0f;
-        StartCoroutine(AnimateWinScreen());
+        onWin?.Invoke();
+        endScreenBG.sprite = winBG;
+        AnimateEndScreen();
     }
-
-    private IEnumerator AnimateWinScreen()
+    
+    private void AnimateEndScreen()
     {
-        Debug.Log(score);
-        winScreenPanel.SetActive(true);
-        scoreText.gameObject.SetActive(false);
-        var originalColor = winScreenBG.color;
-        originalColor.a = 0;
-        winScreenBG.color = originalColor;
-        winScreenBG.DOFade(1, winAnimationDuration).SetUpdate(true);
-        yield return new WaitForSecondsRealtime(winAnimationDuration / 3);
-        scoreText.gameObject.SetActive(true);
+        Time.timeScale = 0f;
         scoreText.text = score.ToString();
-        // scoreText.transform.DOScale(Vector3.zero, winAnimationDuration).From().SetEase(Ease.OutBack).SetUpdate(true);
-        scoreText.transform.DOPunchScale(new Vector3(-1,-1,0), winAnimationDuration*2, 3, 3).SetUpdate(true);
+        scoreText.gameObject.SetActive(false);
+        endScreenPanel.SetActive(true);
+        DOTween.Sequence().Insert(0, endScreenBG.transform.DOScale(Vector3.zero, animationDuration).From().SetEase(Ease.OutBack))
+            .Insert(animationDuration/3, scoreText.transform.DOMoveY(0, 2 * animationDuration / 3).From().SetEase(Ease.OutBack).OnPlay(() => scoreText.gameObject.SetActive(true)))
+            .SetUpdate(true);
     }
-
+    
     public void RestartGame()
     {
         ResetTimeScale();

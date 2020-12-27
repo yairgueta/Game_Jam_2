@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
+    [SerializeField] private GameObject explosionEffectPrefab;
     [SerializeField] private float power = 30f;
     [SerializeField] private float duration = 3f;
 
@@ -16,8 +17,7 @@ public class Fireball : MonoBehaviour
     {
         Enemy hit = other.gameObject.GetComponent<Enemy>();
         hit?.GetHit(power);
-        // TODO: Explosion Effect?
-        Debug.Log(other.gameObject.name);
+        Instantiate(explosionEffectPrefab);
         Destroy(gameObject);
     }
 }

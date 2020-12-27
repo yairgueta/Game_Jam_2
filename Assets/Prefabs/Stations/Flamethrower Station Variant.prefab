@@ -16,6 +16,7 @@ MonoBehaviour:
   hydraHead: {fileID: 4528993389488209891}
   maxAimAngle: 25
   aimSpeed: 100
+  hydraEyes: {fileID: 3002026786119066804}
   onFlameStart:
     m_PersistentCalls:
       m_Calls:
@@ -95,6 +96,7 @@ GameObject:
   - component: {fileID: 4748284249397692050}
   - component: {fileID: 3337640734009460128}
   - component: {fileID: 7500827390439070129}
+  - component: {fileID: 3507602167365147273}
   m_Layer: 0
   m_Name: Flame Animation
   m_TagString: Untagged
@@ -110,7 +112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5617051766885618001}
   m_LocalRotation: {x: -0, y: -0, z: 0.0011420846, w: 0.99999934}
-  m_LocalPosition: {x: 0.26, y: 4.4029, z: 0}
+  m_LocalPosition: {x: 0.26, y: 4.72, z: 0}
   m_LocalScale: {x: 1.2579421, y: 1.2579421, z: 1.2579423}
   m_Children: []
   m_Father: {fileID: 4528993389488209890}
@@ -135,7 +137,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,7 +160,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7322109603683506090, guid: 9371ff570889b4b0093881a7d8926ed1,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -230,6 +232,24 @@ PolygonCollider2D:
       - {x: 1.6933589, y: 0.39438713}
       - {x: 1.7429318, y: 7.367561}
       - {x: -1.9636923, y: 6.9152346}
+--- !u!114 &3507602167365147273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617051766885618001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 1, g: 0.6136042, b: 0, a: 1}
+  glowBrightness: 2.08
+  outlineWidth: 1
+  alphaThreshold: 1
+  drawOutside: 0
+  enableInstancing: 0
 --- !u!1001 &5505549813907571762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,6 +257,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2637209261689114644, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991419024581104503, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448685305506118607, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8267926252373229376, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
         type: 3}
       propertyPath: m_RootOrder
@@ -314,6 +349,12 @@ GameObject:
 --- !u!4 &4528993389488209890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8267926253041138640, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5505549813907571762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3002026786119066804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7336068119786971270, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
     type: 3}
   m_PrefabInstance: {fileID: 5505549813907571762}
   m_PrefabAsset: {fileID: 0}

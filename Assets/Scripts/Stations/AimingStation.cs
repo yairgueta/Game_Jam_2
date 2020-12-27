@@ -9,6 +9,7 @@ namespace Stations
         [SerializeField] private GameObject hydraHead;
         [SerializeField] protected float maxAimAngle = 25f;
         [SerializeField] protected float aimSpeed = 100f;
+        [SerializeField] private GameObject hydraEyes;
 
         protected float aimAngle;
 
@@ -17,6 +18,9 @@ namespace Stations
             base.Start();
             stationType = StationTypeEnum.Aiming;
             aimAngle = 0;
+            hydraEyes.SetActive(false);
+            OnEjection += () => hydraEyes.SetActive(false);
+            OnInjection += () => hydraEyes.SetActive(true);
         }
 
         private void Update()

@@ -101,6 +101,18 @@ public class SoundManager : Singleton<SoundManager>
                 break;
         }
     }
+
+    public void PlaySound(string sound)
+    {
+        Sound.TryParse(sound, true, out Sound soundEn);
+        if (soundEn == default)
+        {
+            Debug.LogWarning(sound + " is not a valid sound!");
+            return;
+        }
+        PlaySound(soundEn);
+    }
+    
     public void StopSound(Sound sound)
     {
         switch (sound)

@@ -16,6 +16,7 @@ MonoBehaviour:
   hydraHead: {fileID: 2885893163406799796}
   maxAimAngle: 25
   aimSpeed: 100
+  hydraEyes: {fileID: 4575552234603669731}
   fireballPrefab: {fileID: 1944219843875379387, guid: 36a7f9520860e446498309dd188b5d4b,
     type: 3}
   spawnPoint: {fileID: 5697989051159733656}
@@ -57,6 +58,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 599546742792232569, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: glowColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 599546742792232569, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: glowColor.g
+      value: 0.07358491
+      objectReference: {fileID: 0}
+    - target: {fileID: 599546742792232569, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: glowColor.r
+      value: 0.6792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 599546742792232569, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 599546742792232569, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: alphaThreshold
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 599546742792232569, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: glowBrightness
+      value: 2.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637209261689114644, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637209261689114644, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637209261689114644, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.528
+      objectReference: {fileID: 0}
     - target: {fileID: 3122444599249886016, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -76,6 +122,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.6612928
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991419024581104503, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448685305506118607, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8267926252373229376, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
         type: 3}
@@ -181,6 +237,12 @@ GameObject:
 --- !u!4 &2885893163406799797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8267926253041138640, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6535096437686110309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4575552234603669731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7336068119786971270, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
     type: 3}
   m_PrefabInstance: {fileID: 6535096437686110309}
   m_PrefabAsset: {fileID: 0}
