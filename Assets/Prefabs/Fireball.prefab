@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9010911425180258018}
   - component: {fileID: 6077799270744655657}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Fireball Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8912427981508456713}
   - component: {fileID: 4894821188776959217}
   - component: {fileID: 2238859788311502416}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5861ef66980c641d98d8effcd8976a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionEffectPrefab: {fileID: 2199827009162658745, guid: afd5b8b036ad4436799c9633245b133d,
+    type: 3}
   power: 30
   duration: 3
 --- !u!61 &2238859788311502416

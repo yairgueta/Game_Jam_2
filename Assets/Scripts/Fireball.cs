@@ -17,7 +17,7 @@ public class Fireball : MonoBehaviour
     {
         Enemy hit = other.gameObject.GetComponent<Enemy>();
         hit?.GetHit(power);
-        Instantiate(explosionEffectPrefab);
+        Instantiate(explosionEffectPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
