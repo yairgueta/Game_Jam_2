@@ -1,33 +1,32 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Enemies;
 using UnityEngine;
 
-public class BallistraBullet : MonoBehaviour, IDamageMaker
+namespace Enemies
 {
-    [SerializeField] private float damage = 10f;
-    [SerializeField] private float duration = 4f;
+    public class BallistraBullet : MonoBehaviour, IDamageMaker
+    {
+        [SerializeField] private float damage = 10f;
+        [SerializeField] private float duration = 4f;
     
-    public float Damage
-    {
-        get => damage;
-        set => damage = value;
-    }
+        public float Damage
+        {
+            get => damage;
+            set => damage = value;
+        }
 
-    private void Start()
-    {
-        Destroy(gameObject, duration);
-    }
+        private void Start()
+        {
+            Destroy(gameObject, duration);
+        }
 
-    public float MakeDamage()
-    {
-        Destroy(gameObject);
-        return damage;
-    }
+        public float MakeDamage()
+        {
+            Destroy(gameObject);
+            return damage;
+        }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        Destroy(gameObject);
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            Destroy(gameObject);
+        }
     }
 }

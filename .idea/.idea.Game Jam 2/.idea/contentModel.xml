@@ -7,7 +7,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="HydraLight.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="Fonts" t="Include">
             <e p="gelio" t="Include">
@@ -316,7 +315,6 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="BuildingMinimap.cs" t="Include" />
           <e p="Controllers" t="Include">
             <e p="Player1 Controllers.cs" t="Include" />
             <e p="Player2 Controllers.cs" t="Include" />
@@ -338,6 +336,7 @@
             <e p="HydraHead.cs" t="Include" />
             <e p="HydraHeadsController.cs" t="Include" />
             <e p="HydraHealth.cs" t="Include" />
+            <e p="HydraLight.cs" t="Include" />
             <e p="HydraMovement.cs" t="Include" />
           </e>
           <e p="RepetitiveMapObject.cs" t="Include" />
@@ -358,9 +357,11 @@
           </e>
           <e p="TriggerActionInvoker.cs" t="Include" />
           <e p="UI" t="Include">
-            <e p="CanvasScript.cs" t="Include" />
+            <e p="BuildingMinimap.cs" t="Include" />
+            <e p="MinimapCameraController.cs" t="Include" />
             <e p="MinimapManager.cs" t="Include" />
             <e p="PlayerPanelUI.cs" t="Include" />
+            <e p="StartScreenAnimation.cs" t="Include" />
             <e p="WaveUI.cs" t="Include" />
           </e>
           <e p="Wave" t="Include">
@@ -368,7 +369,6 @@
             <e p="WavesManager.cs" t="Include" />
           </e>
         </e>
-        <e p="StartScreenAnimation.cs" t="Include" />
       </e>
       <e p="AstarPathfindingProject.csproj" t="IncludeRecursive" />
       <e p="AstarPathfindingProjectEditor.csproj" t="IncludeRecursive" />

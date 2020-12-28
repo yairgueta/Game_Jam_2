@@ -37,15 +37,9 @@ namespace Stations
                     var reflection = Vector2.Reflect(movement, normal).normalized; 
                     movement += Mathf.Sign(outForces)*reflection;
                     movement.Normalize();
-                    // Debug.DrawLine(transform.position, (Vector2)transform.position + (.5f+3*i)* Mathf.Sign(outForces)*reflection, Color.red, 3f);
-                    // Debug.DrawLine(transform.position, (Vector2)transform.position + (.5f+3*i) * dir, Color.blue, 3f);
-                    // Debug.DrawLine(transform.position, (Vector2)transform.position + (.5f+3*i)*(dir + Mathf.Sign(outForces)*reflection).normalized, Color.green, 3f);
                 }
             }
-
-        
             Vector2 delta = speed * Time.fixedDeltaTime * movement.normalized;
-            // rb2d.MovePosition(rb2d.position + delta);
             transform.Translate(delta, Space.World);
         }
 
