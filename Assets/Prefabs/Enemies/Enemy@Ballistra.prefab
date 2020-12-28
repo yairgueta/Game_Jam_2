@@ -135,10 +135,10 @@ MonoBehaviour:
   onChangedTarget:
     m_PersistentCalls:
       m_Calls: []
-  maxHP: 100
-  bodyPower: 10
+  maxHP: 150
+  bodyPower: 40
   speed: 3
-  score: 10
+  score: 30
 --- !u!114 &3783590417264962880
 MonoBehaviour:
   m_ObjectHideFlags: 0

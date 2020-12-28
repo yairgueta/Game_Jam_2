@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    private AudioSource GameAudio;
-    private AudioSource FlameSoundEffect;
+    private static AudioSource GameAudio;
+    private static AudioSource FlameSoundEffect;
 
-    private AudioSource SoundEffects;
+    private static AudioSource SoundEffects;
 
-    private AudioClip GameSound;
-    private AudioClip StartSound;
-    private AudioClip FireSoundEffect;
-    private AudioClip buttonClickSoundEffect;
-    private AudioClip GameOverSound;
-    private AudioClip LoseHeadSound;
-    private AudioClip WinGameSound;
-    private AudioClip WinWaveSound;
-    private AudioClip EnemyKillSound;
+    private static AudioClip GameSound;
+    private static AudioClip StartSound;
+    private static AudioClip FireSoundEffect;
+    private static AudioClip buttonClickSoundEffect;
+    private static AudioClip GameOverSound;
+    private static AudioClip LoseHeadSound;
+    private static AudioClip WinGameSound;
+    private static AudioClip WinWaveSound;
+    private static AudioClip EnemyKillSound;
 
     protected override void Awake()
     {
-
+        base.Awake();
         GameAudio = gameObject.AddComponent<AudioSource>();
         GameSound = Resources.Load<AudioClip>("Sounds/GameSound");
         StartSound = Resources.Load<AudioClip>("Sounds/StartSceneSoundtrack");
@@ -47,7 +47,6 @@ public class SoundManager : Singleton<SoundManager>
         SoundEffects.playOnAwake = false;
         GameAudio.playOnAwake = true;
 
-        base.Awake();
     }
     public enum Sound
     {
@@ -127,5 +126,16 @@ public class SoundManager : Singleton<SoundManager>
                 GameAudio.Stop();
                 break;
         }
+    }
+    
+    public void StopSound(string sound)
+    {
+        Sound.TryParse(sound, true, out Sound soundEn);
+        if (soundEn == default)
+        {
+            Debug.LogWarning(sound + " is not a valid sound!");
+            return;
+        }
+        StopSound(soundEn);
     }
 }

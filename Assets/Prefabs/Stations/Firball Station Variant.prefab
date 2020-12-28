@@ -88,6 +88,27 @@ PrefabInstance:
       propertyPath: glowBrightness
       value: 2.69
       objectReference: {fileID: 0}
+    - target: {fileID: 1985407800920128392, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.72831684
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985407800920128392, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985407800920128392, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417711124952800378, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b6d36389b56ab461181a594ab8001ff3,
+        type: 3}
     - target: {fileID: 2637209261689114644, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
         type: 3}
       propertyPath: m_RootOrder
@@ -102,6 +123,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845872043247001970, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: maxHP
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076300551189598763, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: glowColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076300551189598763, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: glowColor.g
+      value: 0.07450981
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076300551189598763, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: glowColor.r
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076300551189598763, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: glowBrightness
+      value: 2.02
       objectReference: {fileID: 0}
     - target: {fileID: 3122444599249886016, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
         type: 3}
@@ -128,7 +174,17 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4105271123423349727, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.39
+      objectReference: {fileID: 0}
     - target: {fileID: 5448685305506118607, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901837086179296982, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -220,6 +276,12 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.6612928
       objectReference: {fileID: 0}
+    - target: {fileID: 8907330683914217912, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b6d36389b56ab461181a594ab8001ff3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9be8676a97ec4b4f9e1f4bfb085344d, type: 3}
 --- !u!1 &2885893164083099428 stripped

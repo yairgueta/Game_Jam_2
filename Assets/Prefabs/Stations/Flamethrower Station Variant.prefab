@@ -56,6 +56,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8063429458571855402, guid: 11ca03bec061444a69b4a92d82a65bb4,
+          type: 3}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FlameSound
+          m_BoolArgument: 1
+        m_CallState: 2
   onFlameEnd:
     m_PersistentCalls:
       m_Calls:
@@ -81,6 +94,19 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8063429458571855402, guid: 11ca03bec061444a69b4a92d82a65bb4,
+          type: 3}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: StopSound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FlameSound
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &5617051766885618001
@@ -201,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a9c2dae49f24469b94797165155e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 30
+  power: 55
 --- !u!60 &7500827390439070129
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -260,14 +286,29 @@ PrefabInstance:
     - target: {fileID: 2637209261689114644, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845872043247001970, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: maxHP
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3991419024581104503, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4105271123423349727, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5448685305506118607, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901837086179296982, guid: d9be8676a97ec4b4f9e1f4bfb085344d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

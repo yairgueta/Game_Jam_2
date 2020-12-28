@@ -1,12 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using Enemies;
 using Hydra;
 using TMPro;
-using UnityEditor;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -16,6 +11,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public float mapLength = 100f;
+    public UnityEvent<int> onScoreChange;
 
     [Header("End Game References")] 
     [SerializeField] private UnityEvent onWin, onLose;
@@ -35,30 +31,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        EnemiesManager.Instance.onEnemyDeath.AddListener((e) => score += e.Score);
+        EnemiesManager.Instance.onEnemyDeath.AddListener((e) =>
+        {
+            score += e.Score;
+            onScoreChange?.Invoke(score);
+        });
     }
-
-
-    #region menus
-    [MenuItem("Manager/Lose")]
-    public static void Lose_Menu()
-    {
-        Instance.Lose();
-    }
-
-    [MenuItem("Manager/Win")]
-    public static void Win_Menu()
-    {
-        Instance.Win();
-    }
-
-    [MenuItem("Manager/Restart")]
-    public static void Restart_Menu()
-    {
-        Instance.RestartGame();
-    }
-
-    #endregion
 
     public void Lose()
     {
@@ -98,7 +76,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(Vector3.zero, new Vector3(mapLength, 1, 0));
         Gizmos.color = Color.green;

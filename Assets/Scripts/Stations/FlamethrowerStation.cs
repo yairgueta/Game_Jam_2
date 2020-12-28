@@ -10,11 +10,18 @@ namespace Stations
         public UnityEvent onFlameEnd;
 
         private bool isFiring;
-        
+        protected override void Start()
+        {
+            base.Start();
+            OnEjection += () =>
+            {
+                if (isFiring) EndFlame();
+            }; 
+        }
+
         protected override void EjectAction()
         {
             currentController?.ExitStation();
-            if (isFiring) EndFlame();
         }
 
         protected override void FireAction() { }
